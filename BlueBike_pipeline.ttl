@@ -36,7 +36,7 @@
   js:rml_mapping_location <./bluebike.rml.ttl>;
   js:rml_data_output <ld/writer-js>;
   rml:jarFile <./rmlmapper-6.2.0-r368-all.jar>;
-  js:cron "*/30 * * * * *".
+  js:cron "*/15 * * * * *".
 
 [] a js:Sdsify;
   js:input <ld/reader-js>;

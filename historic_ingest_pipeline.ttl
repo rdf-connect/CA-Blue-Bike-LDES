@@ -35,7 +35,7 @@
 [] a js:FolderRead;
   js:folder_location <./historic_data>;
   js:file_stream <ld/writer-js>;
-  js:max_memory 3^^xsd:double.
+  js:max_memory 3.
 
 [] a js:Sdsify;
   js:input <ld/reader-js>;
