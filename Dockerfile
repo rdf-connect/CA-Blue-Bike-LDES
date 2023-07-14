@@ -1,5 +1,5 @@
 # Start from Node.js ready container 
-FROM node:18
+FROM node:20
 # Install java
 RUN apt-get update
 RUN apt-get install -y default-jre-headless
