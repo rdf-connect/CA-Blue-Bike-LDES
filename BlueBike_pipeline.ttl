@@ -3,11 +3,10 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rml: <https://w3id.org/conn/rml#> .
-@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 
 <> owl:imports <https://raw.githubusercontent.com/TREEcg/connector-architecture/main/channel/file.ttl>.
 <> owl:imports <./processor/rml-mapper-processor-ts/rmlMapper.ttl>.
-<> owl:imports <./processor/sds-processors/sdsify.ttl>.
+<> owl:imports <./processor/sds-processors/configs/sdsify.ttl>.
 <> owl:imports <./processor/sds-storage-writer-mongo/step.ttl>.
 
 #### Channels
@@ -36,7 +35,7 @@
 [] a js:RmlMapperString;
   js:rml_mapping_location <./bluebike.rml.ttl>;
   js:rml_data_output <ld/writer-js>;
-  rml:jarFile <./rmlmapper-6.1.3-r367-all.jar>;
+  rml:jarFile <./rmlmapper-6.2.0-r368-all.jar>;
   js:cron "*/30 * * * * *".
 
 [] a js:Sdsify;
@@ -51,4 +50,5 @@
   js:metadataCollection "BLUEBIKE_META";
   js:dataCollection "BLUEBIKE_DATA";
   js:indexCollection "BLUEBIKE_INDEX";
-  js:databaseUrl "mongodb://localhost:27017/ldes".
+  js:databaseUrl "mongodb://localhost:27017/ldes";
+  js:pageSize 100.
